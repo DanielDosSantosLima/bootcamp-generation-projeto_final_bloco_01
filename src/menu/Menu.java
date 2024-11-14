@@ -1,11 +1,17 @@
 package menu;
 
 import java.util.Scanner;
+import conta.model.Produto;
 
 public class Menu {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
+
+		Produto produto1 = new Produto(1, "Memórias Póstumas de Brás Cubas", 50.00);
+		Produto produto2 = new Produto(2, "O Cortiço", 39.99);
+		Produto produto3 = new Produto(3, "Til", 45.00);
+		produto1.visualizar();
 
 		int opcao;
 
@@ -14,7 +20,7 @@ public class Menu {
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                   LIVRARIA COMETA	                 ");
-			System.out.println("                                                     ");
+			System.out.println("            (funcionalidades para o lojista)         ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("            1 - Criar Cadastro                       ");
