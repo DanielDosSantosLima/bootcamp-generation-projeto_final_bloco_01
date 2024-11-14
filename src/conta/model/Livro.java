@@ -18,7 +18,7 @@ public class Livro extends Produto {
 	}
 
 	public void exibirProduto() {
-		super.exibirProduto();
+		//super.exibirProduto();  
 		System.out.println("Descrição: " + descricao);
 	}
 	

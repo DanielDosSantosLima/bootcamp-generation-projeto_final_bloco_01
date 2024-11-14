@@ -1,18 +1,18 @@
 package menu;
 
 import java.util.Scanner;
-import conta.model.Produto;
+// import conta.model.Livro;
+// import conta.model.Produto;
+import conta.controller.Controller;
 
 public class Menu {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
 
-		Produto produto1 = new Produto(1, "Memórias Póstumas de Brás Cubas", 50.00);
-		Produto produto2 = new Produto(2, "O Cortiço", 39.99);
-		Produto produto3 = new Produto(3, "Til", 45.00);
-		produto1.visualizar();
-
+		// Produto livro1 = new Livro(1, "Memórias Póstumas de Brás Cubas", 50.00, "Livro Nacional");
+		Controller controller = new Controller();
+				
 		int opcao;
 
 		while (true) {
@@ -51,13 +51,15 @@ public class Menu {
 					System.out.println("Listar todas os Cadastros\n\n");
 					break;
 				case 3:
-					System.out.println("Buscar Cadastro por Número\n\n");
+					System.out.println("Buscar Cadastro por Número\n\n");			
 					break;
 				case 4:
 					System.out.println("Atualizar Dados do Cadastro\n\n");
 					break;
 				case 5:
 					System.out.println("Ver Produtos\n\n");
+					controller.listarTodos();
+					
 					break;
 				default:
 					System.out.println("Opção Inválida, tente novamente!");
